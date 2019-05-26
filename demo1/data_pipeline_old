@@ -1,0 +1,31 @@
+#the typical problem
+import numpy as np
+
+
+
+
+def clip_array(array, cutoff, cutoff_val):
+    array[array > cutoff] = cutoff_val
+    return array
+
+
+def main():
+    CUTOFF = 1
+    CUTOFF_VAL = 2
+    filename = "data.csv"
+    data = np.loadtxt(filename, delimiter=',')
+
+    clipped_data = clip_array(data, CUTOFF, CUTOFF_VAL)
+    np.savetxt('clipped_data.csv', clipped_data)
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+# {d1 d2 d3 ... } -> {cd_1 cd_2 cd_3 ...}
+#                 ^^
+#            data_pipeline?
+# data_pipeline: (you repeat for all i, changing pipeline each time) di -> cd_i
+# BAD

@@ -1,0 +1,11 @@
+what needs to be illustrated:
+    programming by wishful thinking / outside in
+
+    unitary / isolated
+
+    def of tdd:
+        write failing test
+        write minimal code to pass
+        refactor
+
+    how to write a test?
